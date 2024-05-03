@@ -34,8 +34,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Test code
+        id: test-code-step
         run: npm run test
+        # We only want to generate a test report if the 'tests' step fails
       - name: Upload test report
+          # Using the steps contexts object we can get the outcome of the test-code-step
+        if: steps.test-code-step.outcome == 'failure'
         uses: actions/upload-artifact@v3
         with:
           name: test-report
