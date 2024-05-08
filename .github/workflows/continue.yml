@@ -1,5 +1,5 @@
 # Controlling Workflow & Job Execution
-name: Website Deployment
+name: continue on error workflow website dev 
 on:
   push:
     branches:
