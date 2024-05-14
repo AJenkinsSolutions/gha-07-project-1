@@ -2,12 +2,10 @@ name: Test git hub extentions
 
 on: 
     push: 
-        branches: ["main"] 
-
 jobs:
     testing:
         runs-on: ubuntu-latest
         steps:
             - run: | 
-                "echo hello world"
+                echo "hello world"
     
