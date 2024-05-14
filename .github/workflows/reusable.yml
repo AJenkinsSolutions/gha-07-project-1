@@ -16,7 +16,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest  
     steps:
-      - name: Get Code
+      - name: Get Artifacts
         uses: actions/download-artifact@v3
         with:
             # Using the value from the input context object
