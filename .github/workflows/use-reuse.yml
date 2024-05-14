@@ -76,7 +76,9 @@ jobs:
     needs: build
     # Provide the path to the reusable workflow
     uses: ./.github/workflows/reusable.yml
-    
+    # Provide all the values that are needed in the reusable workflow\
+    with: 
+      artifact-nameL: dist-files
   report:
     needs: [lint, deploy]
     if: failure()
