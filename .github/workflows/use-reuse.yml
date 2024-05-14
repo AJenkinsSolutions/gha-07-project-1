@@ -79,6 +79,9 @@ jobs:
     # Provide all the values that are needed in the reusable workflow\
     with: 
       artifact-name: dist-files
+    # Providing the secrets
+      secrets:
+      some-secret: ${{ }}
   report:
     needs: [lint, deploy]
     if: failure()

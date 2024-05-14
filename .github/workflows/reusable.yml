@@ -10,6 +10,10 @@ on:
         #    You can set a default value if no name is provided
            default: dist
            type: string
+    # Here we can declare
+    secrets: 
+        some-secret:
+            required: false
            
 
 jobs:
