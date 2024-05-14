@@ -1,9 +1,11 @@
-name: Resuable Workflows
-# To make a workflow resuable it must be 'callable'
-on: workflow-call
+name: Reusable Workflows
+
+on:
+  workflow_call:  # Corrected event name
+
 jobs:
-    deploy:
-        runs-on: unbuntu-latest
-        steps:
-            - name: output information
-            run: echo "Deploying & Uploading"
+  deploy:
+    runs-on: ubuntu-latest  # Corrected runner label
+    steps:
+      - name: output information
+        run: echo "Deploying & Uploading.."
