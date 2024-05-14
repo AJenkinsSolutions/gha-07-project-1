@@ -1,11 +1,25 @@
 name: Reusable Workflows
 
 on:
-  workflow_call:  # Corrected event name
+  workflow_call:
+    # Reserved Key word
+    inputs:
+        artifact-name:
+           description: The name of the deployable artifact files
+           required: false
+        #    You can set a default value if no name is provided
+           default: dist
+           type: string
+           
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Corrected runner label
+    runs-on: ubuntu-latest  
     steps:
+      - name: Get Code
+        uses: actions/download-artifact@v3
+        with:
+            # Using the value from the input context object
+            name: ${{ inputs.artifact-name}}
       - name: output information
         run: echo "Deploying & Uploading.."
