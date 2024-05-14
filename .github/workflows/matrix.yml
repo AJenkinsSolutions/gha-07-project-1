@@ -4,6 +4,8 @@ name: Matrix Demo
 on: push
 jobs:
     build:
+        # We can use continue on error to make sure subsqent jobs continue if other jobs fail
+        continue-on-error: true
         strategy:
             matrix:
                 node-version: [12, 14, 16]
