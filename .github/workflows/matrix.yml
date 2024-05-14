@@ -1,4 +1,6 @@
 name: Matrix Demo
+
+# Useful if you have a testing process that should run on different operating systems, or you need to test the code against differebtnt version of noded
 on: push
 jobs:
     build:
