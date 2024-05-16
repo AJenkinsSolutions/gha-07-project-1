@@ -81,8 +81,14 @@ jobs:
       artifact-name: dist-filess
     # Providing the secrets
     # secrets:
-    #   # some-secret: ${{secrets.some-secrets}}
-        
+      # some-secret:
+  print-deploy-result:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: print deply output
+        run: echo "${{ needs.deploy.outputs.results}}"
+
      
   report:
     needs: [lint, deploy]
