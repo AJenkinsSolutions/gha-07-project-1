@@ -11,9 +11,9 @@ on:
            default: dist
            type: string
     # Here we can declare
-    secrets: 
-        some-secret:
-            required: false
+    # secrets: 
+    #     some-secret:
+    #         required: true
            
 
 jobs:

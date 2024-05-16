@@ -78,10 +78,12 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     # Provide all the values that are needed in the reusable workflow\
     with: 
-      artifact-name: dist-files
+      artifact-name: dist-filess
     # Providing the secrets
-      secrets:
-      some-secret: ${{ }}
+    # secrets:
+    #   # some-secret: ${{secrets.some-secrets}}
+        
+     
   report:
     needs: [lint, deploy]
     if: failure()
