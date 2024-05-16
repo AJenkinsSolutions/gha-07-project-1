@@ -78,7 +78,7 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     # Provide all the values that are needed in the reusable workflow\
     with: 
-      artifact-name: dist-filess
+      artifact-name: dist-files
     # Providing the secrets
     # secrets:
       # some-secret:
